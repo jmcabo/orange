@@ -75,6 +75,7 @@ struct Use (ARGS...)
 	{
 		assert(args[0]);
 
+		// Issue: https://d.puremagic.com/issues/show_bug.cgi?id=11614
 		static if (args.length == 1)
 			return args[0](dg);
 
